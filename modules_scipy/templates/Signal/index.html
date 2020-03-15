@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+{% block title %}
+Signal
+{% endblock title %}
+<table class="table table-borderless">
+  <thead class="border-bottom font-weight-bold">
+  </thead>
+  <tbody>
+    <tr>
+      <img src="data:image/png;base64,{{ fig_segnal_trend }}" alt="" height="620" ,width="250">
+    </tr>
+    <hr class="my-4">
+    <tr>
+      <ul class="list-group col-xs-12">
+        <li class="list-group-item list-group-item-warning">------------------------------------------- detrend signal
+          -------------------------------------------</li>
+      </ul>
+      <div class="row">
+        <form action="{% url 'getSignalDetrend' %}" method="post">
+          {% csrf_token %}
+          <div class="col-md-6 col-xs-12">
+            <button type="submit" class="btn btn-info btn-lg">
+              <i class="fas fa-chart-line"></i> &nbsp; éliminer la tendance linéaire </button>
+          </div>
+        </form>
+        <div class="col-md-6">
+          <a href="{% url 'index' %}" class="btn btn-success btn-block btn-lg">
+            <i class="fas fa-house-damage"></i> reteur à l'accueil
+          </a>
+        </div>
+      </div>
+    </tr>
+  </tbody>
+
+</table>
+<hr class="my-4">
+
+{% endblock content %}

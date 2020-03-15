@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+{% block title %}
+Signal
+{% endblock title %}
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+
+
+
+    </thead>
+    <tbody>
+        <tr>
+            <img src="data:image/png;base64,{{ fig_signal_detrend }}" alt="" height="620" ,width="250">
+        </tr>
+        <hr class="my-4">
+
+        <tr>
+
+        </tr>
+
+    </tbody>
+</table>
+<hr class="my-4">
+<div class="row">
+    <div class="col-md-4">
+        <a href="{% url 'getSignalTrend' %}" class="btn btn-danger btn-block btn-lg">
+            <i class="fas fa-reply"></i> page précédente
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'index' %}" class="btn btn-success btn-block btn-lg">
+            <i class="fas fa-house-damage"></i> reteur à l'accueil
+        </a>
+    </div>
+</div>
+{% endblock content %}

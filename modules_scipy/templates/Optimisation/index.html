@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+{% block title %}
+Optimisation
+{% endblock title %}
+<table class="table table-borderless">
+  <thead class="border-bottom font-weight-bold">
+  </thead>
+  <tbody>
+    <tr>
+      <img src="data:image/png;base64,{{ fig_nuage }}" alt="" height="620" ,width="250">
+    </tr>
+    <hr class="my-4">
+
+    <tr>
+      <ul class="list-group">
+        <li class="list-group-item active"> Modele Affichées</li>
+      </ul>
+      <form action="{% url 'getModel' %}" method="post">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-8">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" name="modele" value="1"  class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1">
+                Linear <span class="badge badge-danger">F(x) = ax + b</span>
+              </label>
+            </div>
+
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" name="modele" value="2" id="customSwitch2">
+              <label class="custom-control-label" for="customSwitch2">
+
+                Quadratic <span class="badge badge-dark">F(x) = ax2 + bx + c</span>
+              </label>
+            </div>
+
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" name="modele" value="3"  id="customSwitch3">
+              <label class="custom-control-label" for="customSwitch3">
+                Cubic <span class="badge badge-info">F(x) = ax3 + bx2 + cx + d</span>
+
+              </label>
+            </div>
+
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" name="modele" value="4"  id="customSwitch4">
+              <label class="custom-control-label" for="customSwitch4">
+                Logarithmic <span class="badge badge-success">F(x) = a + b Ln(x)</span>
+              </label>
+            </div>
+
+          </div>
+
+        </div>
+        <hr class="my-4">
+
+        <div class="col-md-6">
+
+          <button type="submit" class="btn btn-warning btn-lg"> <i style="color:black"
+              class="fas fa-dharmachakra fa-spin"></i> trouver les parametres </button>
+        </div>
+      </form>
+
+    </tr>
+  </tbody>
+
+</table>
+
+{% endblock content %}

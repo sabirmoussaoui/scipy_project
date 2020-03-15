@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+{% block title %}
+Minimisation
+{% endblock title %}
+<table class="table table-borderless">
+  <thead class="border-bottom font-weight-bold">
+
+
+
+  </thead>
+  <tbody>
+    <tr>
+      <img src="data:image/png;base64,{{ fig_curve }}" alt="" height="620" ,width="250">
+    </tr>
+    <hr class="my-4">
+
+    <tr>
+
+      <ul class="list-group col-xs-12">
+        <li class="list-group-item list-group-item-warning">------------------------------------------- L'algorithme de minimisation -------------------------------------------</li>
+      </ul>
+      <form action="{% url 'getMinimumValue' %}" method="post">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-plus"></i> &nbsp;Initial</span>
+              </div>
+              <input type="text" class="form-control" name="Initial" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg">
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-greater-than-equal"></i> &nbsp; Debut</span>
+              </div>
+              <input type="text" class="form-control" name="Debut" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-less-than-equal"></i> &nbsp; Final</span>
+              </div>
+              <input type="text" class="form-control" name="Final" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg">
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <button type="submit" class="btn btn-info btn-lg"> <i style="color:black"
+              <i class="fab fa-searchengin fa-spin"></i> trouver la valeur minimum </button>
+          </div>
+
+        </div>
+
+      </form>
+
+    </tr>
+  </tbody>
+
+</table>
+<hr class="my-4">
+
+{% endblock content %}

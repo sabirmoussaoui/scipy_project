@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+{% block title %}
+Minimisation
+{% endblock title %}
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+
+
+
+    </thead>
+    <tbody>
+        <tr>
+            <img src="data:image/png;base64,{{ fig_result_minimisation }}" alt="" height="620" ,width="250">
+        </tr>
+        <hr class="my-4">
+
+        <tr>
+
+            <i class="far fa-hand-point-right"></i> min = {{ minimum_value }}
+        </tr>
+
+    </tbody>
+</table>
+<hr class="my-4">
+<div class="row">
+
+    <div class="col-md-4">
+        <a href="{% url 'showNuage' %}" class="btn btn-danger btn-block btn-lg">
+            <i class="fas fa-eye  fa-spin"></i> afficher un modele
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'index' %}" class="btn btn-success btn-block btn-lg">
+            <i class="fas fa-house-damage"></i> reteur à l'accueil
+        </a>
+    </div>
+</div>
+{% endblock content %}

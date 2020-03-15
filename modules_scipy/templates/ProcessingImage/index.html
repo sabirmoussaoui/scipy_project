@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}
+<title>Processing Image</title>
+{% endblock title %}
+{% block content %}
+<form action="{% url 'getProcessingImage' %}"  method="post" enctype="multipart/form-data" autocomplete="off">
+    {% csrf_token %}
+    <div class="row">
+
+    <div class="col-md-4">
+     <label class="btn btn-secondary active">
+    <input id = "myfile" type="file" name="myfile" />
+     </label>
+    </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-warning btn-block btn-lg"><i class="fas fa-database"></i>
+                Upload</button>
+        </div>
+
+    </div>
+</form>
+{% endblock content %}
