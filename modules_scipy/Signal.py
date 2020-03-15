@@ -42,7 +42,6 @@ def main():
     """*****************************************Traitement de Signal*****************************************"""
 
 
-    print("Générer un signal aléatoire avec une tendance")
     # Création d'un Dataset avec une tendance linéaire
     sgn = Signal()
     print("Visualisation du signal ")

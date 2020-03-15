@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
 {% block title %}
-Optimisation
+<title>Optimisation</title>
 {% endblock title %}
 <table class="table table-borderless">
   <thead class="border-bottom font-weight-bold">
@@ -14,7 +14,7 @@ Optimisation
 
     <tr>
       <ul class="list-group">
-        <li class="list-group-item active"> Modele Affichées</li>
+        <li class="list-group-item active">----------------------------------------------Paramètres d'affichage----------------------------------------------------</li>
       </ul>
       <form action="{% url 'getModel' %}" method="post">
         {% csrf_token %}
@@ -58,7 +58,7 @@ Optimisation
         <div class="col-md-6">
 
           <button type="submit" class="btn btn-warning btn-lg"> <i style="color:black"
-              class="fas fa-dharmachakra fa-spin"></i> trouver les parametres </button>
+              class="fas fa-dharmachakra fa-spin"></i> Trouver les paramètres</button>
         </div>
       </form>
 

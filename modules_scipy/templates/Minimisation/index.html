@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 {% block content %}
 {% block title %}
-Minimisation
+<title>Minimisation</title>
+
 {% endblock title %}
 <table class="table table-borderless">
   <thead class="border-bottom font-weight-bold">
@@ -26,9 +27,9 @@ Minimisation
           <div class="col-md-6 col-xs-12">
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-plus"></i> &nbsp;Initial</span>
+                <span class="input-group-text"   id="inputGroup-sizing-lg"><i class="fas fa-plus"></i> &nbsp;Initial</span>
               </div>
-              <input type="text" class="form-control" name="Initial" aria-label="Sizing example input"
+              <input type="text" class="form-control" placeholder="La valeur Initial" name="Initial" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-lg">
             </div>
           </div>
@@ -37,7 +38,7 @@ Minimisation
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-greater-than-equal"></i> &nbsp; Debut</span>
               </div>
-              <input type="text" class="form-control" name="Debut" aria-label="Sizing example input"
+              <input type="text"  placeholder="La valeur de départ" class="form-control" name="Debut" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-lg">
             </div>
           </div>
@@ -48,7 +49,7 @@ Minimisation
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-less-than-equal"></i> &nbsp; Final</span>
               </div>
-              <input type="text" class="form-control" name="Final" aria-label="Sizing example input"
+              <input type="text"  placeholder="La valeur finale" class="form-control" name="Final" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-lg">
             </div>
           </div>

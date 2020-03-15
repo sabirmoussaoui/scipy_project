@@ -3,7 +3,8 @@ from django.conf.urls import  url
 from . import views
 
 urlpatterns = [
-     path('index/', views.index, name='index'),
+  # route (page d'accueil)
+  path('index/', views.index, name='index'),
     #route (processing Images)
          path('processingImg/', views.processingImg, name='processingImg'),
          path('getProcessingImage/', views.getProcessingImage, name='getProcessingImage'),
@@ -13,7 +14,7 @@ urlpatterns = [
     # route (Minimisation)
          path('showCurve/', views.showCurve, name='showCurve'),
          path('getMinimumValue/', views.getMinimumValue, name='getMinimumValue'),
- # route (Minimisation)
+     # route (Minimisation)
          path('getSignalTrend/', views.getSignalTrend, name='getSignalTrend'),
          path('getSignalDetrend/', views.getSignalDetrend, name='getSignalDetrend')
           ]
