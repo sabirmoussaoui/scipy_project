@@ -22,9 +22,14 @@ VERSION >3.8.0
 `pip install numpy` 
 ***
 # Installation
+`
 git clone https://github.com/sabirmoussaoui/scipy_project.git
+
 cd scipy_project-master
-# To execute Scipy project :
+` 
+
+
+## To execute Scipy project :
 ### On Local
 `python manage.py runserver` 
 
