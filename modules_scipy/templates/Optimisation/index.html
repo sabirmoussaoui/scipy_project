@@ -14,14 +14,15 @@
 
     <tr>
       <ul class="list-group">
-        <li class="list-group-item active">----------------------------------------------Paramètres d'affichage----------------------------------------------------</li>
+        <li class="list-group-item active">----------------------------------------------Paramètres
+          d'affichage----------------------------------------------------</li>
       </ul>
       <form action="{% url 'getModel' %}" method="post">
         {% csrf_token %}
         <div class="row">
           <div class="col-md-8">
             <div class="custom-control custom-switch">
-              <input type="checkbox" name="modele" value="1"  class="custom-control-input" id="customSwitch1">
+              <input type="checkbox" name="modele" value="1" class="custom-control-input" id="customSwitch1">
               <label class="custom-control-label" for="customSwitch1">
                 Linear <span class="badge badge-danger">F(x) = ax + b</span>
               </label>
@@ -36,7 +37,7 @@
             </div>
 
             <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" name="modele" value="3"  id="customSwitch3">
+              <input type="checkbox" class="custom-control-input" name="modele" value="3" id="customSwitch3">
               <label class="custom-control-label" for="customSwitch3">
                 Cubic <span class="badge badge-info">F(x) = ax3 + bx2 + cx + d</span>
 
@@ -44,7 +45,7 @@
             </div>
 
             <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" name="modele" value="4"  id="customSwitch4">
+              <input type="checkbox" class="custom-control-input" name="modele" value="4" id="customSwitch4">
               <label class="custom-control-label" for="customSwitch4">
                 Logarithmic <span class="badge badge-success">F(x) = a + b Ln(x)</span>
               </label>

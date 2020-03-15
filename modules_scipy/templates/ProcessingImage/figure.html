@@ -11,67 +11,68 @@
 
     </thead>
     <tbody>
-       <tr>
-       <img src="data:image/png;base64,{{ figure_image }}" alt="" height="620" ,width="250">
-       </tr>
-       <hr class="my-2">
         <tr>
-           <span><i class="fas fa-terminal"></i> Création d'un histogramme de l'image (représente le nombre de pixels en fonction du niveau de gris)</span>
-       </tr>
-       <hr class="my-2">
-       <tr>
-       <img src="data:image/png;base64,{{ fig_histogramme }}" alt="" height="620" ,width="250">
-       </tr>
-       <hr class="my-2">
-       <tr>
-           <span><i class="fas fa-terminal"></i> Création d'une image binaire</span>
-       </tr>
-       <hr class="my-2">
-       <tr>
-       <img src="data:image/png;base64,{{ fig_image_binaire }}" alt="" height="620" ,width="250">
-       </tr>
-       <tr>
-       <hr class="my-2">
-       <span><i class="fas fa-terminal"></i> Enlever les artefacts d'une image binaire</span>
-       </tr>
-       <hr class="my-2">
-       <tr>
-       <img src="data:image/png;base64,{{ fig_enlever_artefacts }}" alt="" height="620" ,width="250">
-       </tr>
-       <hr class="my-2">
-       <tr>
-           <span id="console"><i class="fas fa-terminal"></i> il y a {{ n_label }} groupes</span>
-       </tr>
-       <hr class="my-2">
-       <tr>
-        <span><i class="fas fa-terminal"></i> Visualisation de l'image étiquetée</span>
-       </tr>
-       <hr class="my-2">
-       <tr>
-       <img src="data:image/png;base64,{{ fig_image_etiquete }}" alt="" height="620" ,width="250">
-       </tr>
-       <hr class="my-2">
-       <span><i class="fas fa-terminal"></i> Visualisation des résultats</span>
-       <tr>
+            <img src="data:image/png;base64,{{ figure_image }}" alt="" height="620" ,width="250">
+        </tr>
         <hr class="my-2">
-       <img src="data:image/png;base64,{{ fig_result }}" alt="" height="620" ,width="250">
-       </tr>
+        <tr>
+            <span><i class="fas fa-terminal"></i> Création d'un histogramme de l'image (représente le nombre de pixels
+                en fonction du niveau de gris)</span>
+        </tr>
+        <hr class="my-2">
+        <tr>
+            <img src="data:image/png;base64,{{ fig_histogramme }}" alt="" height="620" ,width="250">
+        </tr>
+        <hr class="my-2">
+        <tr>
+            <span><i class="fas fa-terminal"></i> Création d'une image binaire</span>
+        </tr>
+        <hr class="my-2">
+        <tr>
+            <img src="data:image/png;base64,{{ fig_image_binaire }}" alt="" height="620" ,width="250">
+        </tr>
+        <tr>
+            <hr class="my-2">
+            <span><i class="fas fa-terminal"></i> Enlever les artefacts d'une image binaire</span>
+        </tr>
+        <hr class="my-2">
+        <tr>
+            <img src="data:image/png;base64,{{ fig_enlever_artefacts }}" alt="" height="620" ,width="250">
+        </tr>
+        <hr class="my-2">
+        <tr>
+            <span id="console"><i class="fas fa-terminal"></i> il y a {{ n_label }} groupes</span>
+        </tr>
+        <hr class="my-2">
+        <tr>
+            <span><i class="fas fa-terminal"></i> Visualisation de l'image étiquetée</span>
+        </tr>
+        <hr class="my-2">
+        <tr>
+            <img src="data:image/png;base64,{{ fig_image_etiquete }}" alt="" height="620" ,width="250">
+        </tr>
+        <hr class="my-2">
+        <span><i class="fas fa-terminal"></i> Visualisation des résultats</span>
+        <tr>
+            <hr class="my-2">
+            <img src="data:image/png;base64,{{ fig_result }}" alt="" height="620" ,width="250">
+        </tr>
 
 
     </tbody>
 </table>
 <hr class="my-4">
- <div class="row">
+<div class="row">
 
- <div class="col-md-4">
-            <a href="{% url 'processingImg' %}" class="btn btn-danger btn-block btn-lg">
-                <i class="fas fa-stream"></i> Importer autre image
- </a>
-  </div>
- <div class="col-md-4">
-            <a href="{% url 'index' %}" class="btn btn-success btn-block btn-lg">
-                <i class="fas fa-stream"></i> reteur à l'accueil
- </a>
-  </div>
-  </div>
+    <div class="col-md-4">
+        <a href="{% url 'processingImg' %}" class="btn btn-danger btn-block btn-lg">
+            <i class="fas fa-stream"></i> Importer autre image
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'index' %}" class="btn btn-success btn-block btn-lg">
+            <i class="fas fa-stream"></i> reteur à l'accueil
+        </a>
+    </div>
+</div>
 {% endblock content %}

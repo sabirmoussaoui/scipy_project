@@ -5,81 +5,85 @@
 {% block content %}
 
 <table class="table table-borderless">
-    <thead class="border-bottom font-weight-bold">
+  <thead class="border-bottom font-weight-bold">
 
 
 
-    </thead>
-    <tbody>
-       <tr>
-       <img src="data:image/png;base64,{{ fig_nuage_modele }}" alt="" height="620" ,width="250">
-       </tr>
-       <hr class="my-4">
-     
-       <tr>
+  </thead>
+  <tbody>
+    <tr>
+      <img src="data:image/png;base64,{{ fig_nuage_modele }}" alt="" height="620" ,width="250">
+    </tr>
+    <hr class="my-4">
 
-        <div class="row">
-            <div class="col-4">
-              <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Linear</a>
-                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Quadratic</a>
-                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Cubic</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Logarithmic</a>
-              </div>
+    <tr>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+              href="#list-home" role="tab" aria-controls="home">Linear</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
+              href="#list-profile" role="tab" aria-controls="profile">Quadratic</a>
+            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+              href="#list-messages" role="tab" aria-controls="messages">Cubic</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+              href="#list-settings" role="tab" aria-controls="settings">Logarithmic</a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+              <ul class="list-group">
+                <li class="list-group-item active"> F(x) = ax + b</li>
+                <li class="list-group-item"> a = {{ params_linear.0 }} </li>
+                <li class="list-group-item"> b = {{ params_linear.0 }} </li>
+              </ul>
             </div>
-            <div class="col-8">
-              <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                    <ul class="list-group">
-                        <li class="list-group-item active"> F(x) = ax + b</li>
-                        <li class="list-group-item"> a = {{ params_linear.0 }} </li>
-                        <li class="list-group-item"> b = {{ params_linear.0 }} </li>
-                      </ul>
-                </div>
-                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                    <ul class="list-group">
-                        <li class="list-group-item active"> F(x) = ax2 + bx + c</li>
-                        <li class="list-group-item"> a = {{ params_quadratic.0 }} </li>
-                        <li class="list-group-item"> b = {{ params_quadratic.0 }} </li>
-                        <li class="list-group-item"> c = {{ params_quadratic.0 }} </li>
-                      </ul>
-                </div>
-                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"> 
+            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+              <ul class="list-group">
+                <li class="list-group-item active"> F(x) = ax2 + bx + c</li>
+                <li class="list-group-item"> a = {{ params_quadratic.0 }} </li>
+                <li class="list-group-item"> b = {{ params_quadratic.0 }} </li>
+                <li class="list-group-item"> c = {{ params_quadratic.0 }} </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
 
-                    
-                    <ul class="list-group">
-                        <li class="list-group-item active">F(x) = ax3 + bx2 + cx + d</li>
-                        <li class="list-group-item"> a = {{ params_cubic.0 }} </li>
-                        <li class="list-group-item"> b = {{ params_cubic.1 }} </li>
-                        <li class="list-group-item"> c = {{ params_cubic.2 }} </li>
-                        <li class="list-group-item"> d = {{ params_cubic.3 }} </li>
-                      </ul>
-                </div>
-                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                    <ul class="list-group">
-                        <li class="list-group-item active">  F(x) = a + b Ln(x)</li>
-                        <li class="list-group-item"> a = {{ params_logarithmic.0 }} </li>
-                        <li class="list-group-item"> b = {{ params_logarithmic.0 }} </li>
-                      </ul>
-                </div>
-              </div>
+
+              <ul class="list-group">
+                <li class="list-group-item active">F(x) = ax3 + bx2 + cx + d</li>
+                <li class="list-group-item"> a = {{ params_cubic.0 }} </li>
+                <li class="list-group-item"> b = {{ params_cubic.1 }} </li>
+                <li class="list-group-item"> c = {{ params_cubic.2 }} </li>
+                <li class="list-group-item"> d = {{ params_cubic.3 }} </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+              <ul class="list-group">
+                <li class="list-group-item active"> F(x) = a + b Ln(x)</li>
+                <li class="list-group-item"> a = {{ params_logarithmic.0 }} </li>
+                <li class="list-group-item"> b = {{ params_logarithmic.0 }} </li>
+              </ul>
             </div>
           </div>
-       </tr>
+        </div>
+      </div>
+    </tr>
 
-    </tbody>
+  </tbody>
 </table>
 <hr class="my-4">
- <div class="row">
+<div class="row">
 
- <div class="col-md-4">
-            <a href="{% url 'showNuage' %}" class="btn btn-danger btn-block btn-lg">
-              <i class="fas fa-reply"></i> page précédente </a>
+  <div class="col-md-4">
+    <a href="{% url 'showNuage' %}" class="btn btn-danger btn-block btn-lg">
+      <i class="fas fa-reply"></i> page précédente </a>
   </div>
- <div class="col-md-4">
-            <a href="{% url 'index' %}" class="btn btn-success btn-block btn-lg">
-               <i class="fas fa-house-damage"></i> reteur à l'accueil
- </a>
+  <div class="col-md-4">
+    <a href="{% url 'index' %}" class="btn btn-success btn-block btn-lg">
+      <i class="fas fa-house-damage"></i> reteur à l'accueil
+    </a>
   </div>
-  </div>
+</div>
 {% endblock content %}

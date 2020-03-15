@@ -1,70 +1,69 @@
 {% extends "layout.html" %}
-{% load static %} 
+{% load static %}
 {% block title %}
 <title> index </title>
 {% endblock title %}
 {% block content %}
 <div class="row">
-    <div class="col-sm-6">
-        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-header">Processing Image</div>
-            <div class="card-body">
-              <h5 class="card-title">Processing Image With Scipy</h5>
-              <p class="card-text">scipy.ndimage propose de nombreuses actions pour le traitement d'images: convolutions, filtres de Gauss, méthode de mesures, et morphologie..</p>
-            </div>
-            <div class="card-footer">
-                <a href="{% url 'processingImg' %}" class="btn btn-outline-light">
-                    <i class="fas fa-image"></i> Get Started
-            </a></div>
-          </div>
-</div>
-<div class="col-sm-6">
-    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-        <div class="card-header">Optimisation</div>
-        <div class="card-body">
-          <h5 class="card-title">Optimisation With Scipy</h5>
-          <p class="card-text">permette de développer des modeles statistiques avec la méthode des moindres carrés. On trouve également des fonctions pour faire de la programmation linéaire.</p>
+  <div class="col-sm-6">
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Processing Image</div>
+      <div class="card-body">
+        <h5 class="card-title">Processing Image With Scipy</h5>
+        <p class="card-text">scipy.ndimage propose de nombreuses actions pour le traitement d'images: convolutions,
+          filtres de Gauss, méthode de mesures, et morphologie..</p>
+      </div>
+      <div class="card-footer">
+        <a href="{% url 'processingImg' %}" class="btn btn-outline-light">
+          <i class="fas fa-image"></i> Get Started
+        </a></div>
     </div>
-    <div class="card-footer">
+  </div>
+  <div class="col-sm-6">
+    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">Optimisation</div>
+      <div class="card-body">
+        <h5 class="card-title">Optimisation With Scipy</h5>
+        <p class="card-text">permette de développer des modeles statistiques avec la méthode des moindres carrés. On
+          trouve également des fonctions pour faire de la programmation linéaire.</p>
+      </div>
+      <div class="card-footer">
         <a href="{% url 'showNuage' %}" class="btn btn-outline-light">
           <i class="fas fa-chart-line"></i> &nbsp;Get Started
-    </a></div>
-</div>
-</div>
+        </a></div>
+    </div>
+  </div>
 </div>
 <div class="row">
-    <div class="col-sm-6">
-        <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
-            <div class="card-header">Minimisation</div>
-            <div class="card-body">
-              <h5 class="card-title">Minimisation With Scipy</h5>
-              <p class="card-text">la fonction optimize.minimize est utile pour trouver un minimum local dans une fonction a N dimensions
+  <div class="col-sm-6">
+    <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+      <div class="card-header">Minimisation</div>
+      <div class="card-body">
+        <h5 class="card-title">Minimisation With Scipy</h5>
+        <p class="card-text">la fonction optimize.minimize est utile pour trouver un minimum local dans une fonction a N
+          dimensions
 
-                .</p>
-            </div>
-            <div class="card-footer">
-                <a href="{% url 'showCurve' %}"class="btn btn-outline-light">
-                <i class="fas fa-image"></i> Get Started
-            </a></div>
-          </div>
-</div>
-<div class="col-sm-6">
-      <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-        <div class="card-header">Signal</div>
-        <div class="card-body">
-          <h5 class="card-title">Signal with Scipy</h5>
-          <p class="card-text">La fonction signal.detrend est parfaite pour éliminer une tendance linéaire dans un signal.</p>
-        </div>
-        <div class="card-footer">
-            <a href="{% url 'getSignalTrend' %}" class="btn btn-outline-light">
-                <i class="fas fa-wave-square"></i> Get Started
-        </a></div>
+          .</p>
       </div>
-</div>
+      <div class="card-footer">
+        <a href="{% url 'showCurve' %}" class="btn btn-outline-light">
+          <i class="fas fa-image"></i> Get Started
+        </a></div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+      <div class="card-header">Signal</div>
+      <div class="card-body">
+        <h5 class="card-title">Signal with Scipy</h5>
+        <p class="card-text">La fonction signal.detrend est parfaite pour éliminer une tendance linéaire dans un signal.
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="{% url 'getSignalTrend' %}" class="btn btn-outline-light">
+          <i class="fas fa-wave-square"></i> Get Started
+        </a></div>
+    </div>
+  </div>
 </div>
 {% endblock content %}
-
-
-
-
-
