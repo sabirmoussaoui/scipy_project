@@ -11,7 +11,7 @@
 ### install python
 VERSION >3.8.0 
 ***
-# method 1
+## method 1
 
 ### install Django from your console.
 
@@ -25,9 +25,10 @@ VERSION >3.8.0
 
 `pip install numpy` 
 ***
-#### method 2
+## method 2
 
 `cd scipy_project-master` 
+
 `pip install --user -r requirements.txt ` 
 
 ***
